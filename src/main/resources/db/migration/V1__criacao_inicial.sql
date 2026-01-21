@@ -22,7 +22,7 @@ create table livro(
 
 create table exemplar(
 	id BIGSERIAL primary key,
-	livro_id BIGSERIAL not null,
+	livro_id bigint not null,
 	codigo_exemplar varchar not null,
 	localizacao varchar not null,
 	status varchar not null,
