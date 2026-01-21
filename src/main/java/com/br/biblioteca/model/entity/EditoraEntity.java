@@ -16,16 +16,16 @@ public class EditoraEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column
+	@Column(nullable = false)
 	private String nome;
 	
-	@Column
+	@Column(nullable = false)
 	private String pais;
 	
-	@Column
+	@Column(nullable = false)
 	private String cidade;
 	
-	@Column
+	@Column(nullable = false)
 	private String cnpj;
 
 }

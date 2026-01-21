@@ -11,7 +11,7 @@ create table livro(
 	id BIGSERIAL primary key,
 	isbn varchar not null,
 	titulo varchar not null,
-	ano_publicacao integer not null,
+	ano_publicacao date not null,
 	edicao integer not null,
 	num_paginas integer not null,
 	idioma varchar not null,
