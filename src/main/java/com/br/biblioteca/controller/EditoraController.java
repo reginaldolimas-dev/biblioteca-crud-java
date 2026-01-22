@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.br.biblioteca.dto.EditoraFiltroDTO;
 import com.br.biblioteca.dto.EditoraResumoDTO;
 import com.br.biblioteca.service.EditoraService;
 
@@ -22,7 +23,7 @@ public class EditoraController {
 	private final EditoraService service;
 	
 	@GetMapping
-	public Page<EditoraResumoDTO> pesquisaPaginada(Pageable paginacao){
-		return service.pesquisaPaginada(paginacao);
+	public Page<EditoraResumoDTO> pesquisaPaginada(EditoraFiltroDTO filtro, Pageable paginacao){
+		return service.pesquisaPaginada(filtro, paginacao);
 	}
 }
